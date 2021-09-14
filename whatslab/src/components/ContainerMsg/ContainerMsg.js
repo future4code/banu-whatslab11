@@ -1,14 +1,16 @@
 import React from 'react';
 
-function ContainerMsg (props) {
-    return (
-        <div className="container-texto">
-            <input className='nome-usuario' />
-            <input className='mensagem-usuario' />
-            <button> Enviar </button>
+class ContainerMsg extends React.Component {
+    render() {
+        return (
+            <div className="container-texto">
+                <input className='nome-usuario' />
+                <input className='mensagem-usuario' />
+                <button> Enviar </button>
 
-        </div>
-    )
-};
+            </div>
+        )
+    }
+}
 
-export default ContainerMsg ;
+export default ContainerMsg;
