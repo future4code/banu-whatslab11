@@ -1,13 +1,13 @@
+import React from 'react';
 import styled from 'styled-components';
-import ContainerPrincipal from './components/ContainerMain/ContainerMain'
 import ContainerMsg from './components/ContainerMsg/ContainerMsg'
 
-const DivPai = styled.div `
+const DivPai = styled.div`
   display: flex;
   justify-content: center;
 `
 
-const DivDosElementos = styled.div `
+const DivDosElementos = styled.div`
   max-width: 600px;
   height: 99vh;
   border: 1px solid black;
@@ -17,21 +17,17 @@ const DivDosElementos = styled.div `
   
 `
 
-function App() {
-  return (
-    <DivPai>
-      <DivDosElementos>
-        <ContainerPrincipal className='app-whatslab' />
-      
-        <ContainerMsg 
-          // nome = ""
-          // mensagem = ""
-        />      
-      </DivDosElementos>
-      
-     </DivPai>
+class App extends React.Component {
 
-  );
+  render() {
+    return (
+      <DivPai>
+        <DivDosElementos>
+          <ContainerMsg />
+        </DivDosElementos>
+      </DivPai>
+    );
+  }
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -15,7 +15,7 @@ const CorpoDoAplicativo = styled.div `
 `
 
 
-class ContainerPrincipal extends React.Component {
+class ContainerMain extends React.Component {
     render() {
         return (
             <CorpoDoAplicativo>
@@ -25,4 +25,4 @@ class ContainerPrincipal extends React.Component {
     }
 }
 
-export default ContainerPrincipal;
+export default ContainerMain;
