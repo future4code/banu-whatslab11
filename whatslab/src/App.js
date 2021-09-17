@@ -10,11 +10,9 @@ const DivPai = styled.div`
 const DivDosElementos = styled.div`
   max-width: 600px;
   height: 99vh;
-  border: 1px solid black;
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
-  
 `
 
 class App extends React.Component {

@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const DadosInput = styled.div`
     display: flex;
     justify-content: start;
-    border: 1px solid gray;
+    height: 4vh;
     margin: 3px;
-    gap: 2px;
+    gap: 5px;
 `
 const InputNome = styled.input`
     width: 20%;
-    border: 1px solid black;
 `
 
 const InputTexto = styled.input`
@@ -22,16 +22,15 @@ const CorpoDoAplicativo = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     padding: 2px;
-    height: 93vh;
+    height: 92.5vh;
     border: 1px solid gray;
     margin: 3px;
-    background-color: #F0FFF0;
+    background-image: linear-gradient(#b5ffb9, #fff);
 `
 
 const DivMensagem = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
     margin: 5px;
     padding-left: 5px;
     border: 1px solid black;
@@ -39,15 +38,39 @@ const DivMensagem = styled.div`
 `;
 
 const NomeUsuario = styled.p`
+font-size: 15px;
 font-weight: bold;
+padding-right: 5px;
+padding-bottom: 1px;
 `;
+
+const MensagemUsuario = styled.p`
+font-size: small;
+`;
+
+const BotaoEnviar = styled.button`
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #000;
+    
+    :hover {
+        padding: 0.5em 1.15em;
+        border-radius: 3px;
+        border-style: none;
+        background-color: green;
+        color: #fff;
+    }
+`;
+
 class ContainerMsg extends React.Component {
 
     state = {
         mensagens: [
             {
-                nome: "Hugo",
-                mensagem: "Mensgame de texto"
+                nome: "Nome",
+                mensagem: "Mensagem"
             }
         ],
         nome: "",
@@ -81,8 +104,8 @@ class ContainerMsg extends React.Component {
                     {this.state.mensagens.map((item, index) => {
                         return (
                             <DivMensagem key={index} >
-                                <NomeUsuario> {item.nome} </NomeUsuario>
-                                <p className='nome'> {item.mensagem} </p>
+                                <NomeUsuario> {item.nome}: </NomeUsuario>
+                                <MensagemUsuario className='nome'> {item.mensagem} </MensagemUsuario>
                             </DivMensagem>
                         )
                     })}
@@ -92,10 +115,8 @@ class ContainerMsg extends React.Component {
                         placeholder="Nome do Usuário" />
                     <InputTexto value={this.state.mensagem} onChange={this.alterarMensagem}
                         placeholder="Digite uma mensagem..." />
-                    <button onClick={this.onClickAdicionar}> Enviar </button>
+                    <BotaoEnviar onClick={this.onClickAdicionar}> Enviar </BotaoEnviar>
                 </DadosInput>
-
-
             </div>
         )
     }
