@@ -5,6 +5,7 @@ import ContainerMsg from './components/ContainerMsg/ContainerMsg'
 const DivPai = styled.div`
   display: flex;
   justify-content: center;
+  
 `
 
 const DivDosElementos = styled.div`
