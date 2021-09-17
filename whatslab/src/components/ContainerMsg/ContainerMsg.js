@@ -1,6 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import iconeMessage from './iconeMessage.svg'
 
+
+const TextoChamada = styled.div`
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+        
+`
 
 const DadosInput = styled.div`
     display: flex;
@@ -22,7 +30,7 @@ const CorpoDoAplicativo = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     padding: 2px;
-    height: 92.5vh;
+    height: 82vh;
     border: 1px solid gray;
     margin: 3px;
     background-image: linear-gradient(#b5ffb9, #fff);
@@ -100,6 +108,10 @@ class ContainerMsg extends React.Component {
     render() {
         return (
             <div>
+                <TextoChamada>
+                    <h2>WhatsLab</h2>
+                    <img src={iconeMessage}/>
+                </TextoChamada>
                 <CorpoDoAplicativo>
                     {this.state.mensagens.map((item, index) => {
                         return (
